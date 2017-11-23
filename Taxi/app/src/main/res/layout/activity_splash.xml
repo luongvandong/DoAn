@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.admin.taxi.activity.DriverLoginActivity">
+    tools:context="com.example.admin.taxi.activity.SplashActivity">
 
-    <FrameLayout
-        android:id="@+id/fram_container"
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_taxi_launcher"
+        android:id="@+id/img_spalsh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </FrameLayout>
-
+        android:layout_height="match_parent" />
 
 </LinearLayout>

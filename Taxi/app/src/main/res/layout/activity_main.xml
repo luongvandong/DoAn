@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.admin.taxi.activity.MainActivity">
 
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="#e6e6e6"></WebView>
+
     <Button
+        android:layout_margin="8dp"
         android:id="@+id/bt_driver"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I am Driver" />
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_button_confirm"
+        android:text="I am driver"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <Button
+        android:layout_margin="8dp"
         android:id="@+id/bt_customer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I am Customer" />
+        android:layout_below="@+id/bt_driver"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_button_confirm"
+        android:text="I am customer"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
-</LinearLayout>
+</RelativeLayout>

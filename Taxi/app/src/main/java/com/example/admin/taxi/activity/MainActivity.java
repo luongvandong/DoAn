@@ -2,12 +2,15 @@ package com.example.admin.taxi.activity;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 
 import com.example.admin.taxi.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
@@ -15,6 +18,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button btDriver;
     @BindView(R.id.bt_customer)
     Button btCustomer;
+    @BindView(R.id.webview)
+    WebView webview;
 
     @Override
     protected int getLayoutId() {
@@ -23,6 +28,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     protected void initView() {
+        webview.loadUrl("file:///android_asset/loader.html");
         btDriver.setOnClickListener(this);
         btCustomer.setOnClickListener(this);
 
@@ -36,9 +42,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.bt_driver:
                 Intent intent = new Intent(MainActivity.this, DriverLoginActivity.class);
                 startActivity(intent);
-                finish();
                 break;
         }
 
     }
+
 }

@@ -6,4 +6,5 @@ package com.example.admin.taxi.utils;
 
 public class Const {
     public static final String KEY_EXTRA_DATA = "extra_data";
+    public static final int TIME_SPLASH = 1000;
 }
